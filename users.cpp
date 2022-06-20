@@ -7,12 +7,12 @@ using namespace std;
 class User {
 	protected:
 	string generate_password() {
-    	std::string tmp_pw;
-        char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        for (int i=0; i<12; i++) {
-            tmp_pw += letters[rand() % 62];
-        }                                                                                                                                                                
-        return tmp_pw;
+		std::string tmp_pw;
+		char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		for (int i=0; i<12; i++) {
+			tmp_pw += letters[rand() % 62];
+		}																																								
+		return tmp_pw;
 	}
 	public:
 	string name;
