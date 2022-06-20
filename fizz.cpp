@@ -11,14 +11,17 @@ namespace App {
 			for (int i = 0; i<=100; i+=1) {
 				float eval_three = i%3;
 				float eval_five = i%5;
-				if (eval_three == 0 && eval_five == 0) {
+				if (eval_three == 0 and eval_five == 0) {
 					print(to_string (i) + ": FizzBuzz\n");
 				}
-				if (eval_three == 0 && eval_five != 0) {
+				if (eval_three == 0 and eval_five != 0) {
 					print(to_string (i) + ": Fizz\n");
 				}
-				if (eval_five == 0 && eval_three != 0) {
+				if (eval_five == 0 and eval_three != 0) {
 					print(to_string (i) + ": Buzz\n");
+				}
+				if (eval_five !=0 and eval_three != 0) {
+					print(to_string (i) + ":\n");
 				}
 			}
 			return 0;
