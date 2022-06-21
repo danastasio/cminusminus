@@ -20,16 +20,16 @@ unordered_map<int, string> system_roles = {
 };
 
 class User {
-    protected:
-    void generate_password() {
-        string tmp_pw;
-        char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	protected:
+	void generate_password() {
+		string tmp_pw;
+		char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		srand(time(0));
-        for (int i=0; i<12; i++) {
-            tmp_pw += letters[rand() % 62];
-        }
+		for (int i=0; i<12; i++) {
+			tmp_pw += letters[rand() % 62];
+		}
 		password = tmp_pw;
-    }
+	}
 
 	public:
 	string first;
