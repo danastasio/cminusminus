@@ -1,6 +1,9 @@
 #include<iostream>
+#include<vector>
+#define in :
 
 using namespace std;
+vector<string> characters = {"Moiraine Damodred", "Siuan Sanche", "Rand Al'Thor", "Nynaeve Al'Mera", "Matrim Cauthon", "Perrin Aybara"};
 class DoublyLinkedList
 {
 	private:
@@ -94,12 +97,9 @@ class DoublyLinkedList
 
 int main() {
 	DoublyLinkedList list;
-	list.append("Moiraine Damodred");
-	list.append("Siuan Sanche");
-	list.append("Rand Al'Thor");
-	list.append("Nynaeve Al'mera");
-	list.append("Mat Cauthon");
-	list.append("Perrin Aybara");
+	for (auto character in characters) {
+		list.append(character);
+	}
 
 	cout << "\nPrint items in linked list" << endl;
 	list.print();
