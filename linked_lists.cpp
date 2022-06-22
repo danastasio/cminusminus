@@ -3,35 +3,35 @@
 using namespace std;
 class LinkedList
 {
-    private:
+	private:
 	struct node
 	{
-	    string data;
-	    struct node *next;
+		string data;
+		struct node *next;
 	};
 
 	node *head = NULL;
 	node *tail = NULL;
 	public:
 	int length = 0;
-    void append(string n)
-    {
-        node *tmp = new node;
-        tmp->data = n;
-        tmp->next = NULL;
+	void append(string n)
+	{
+		node *tmp = new node;
+		tmp->data = n;
+		tmp->next = NULL;
 
-        if(head == NULL)
-        {
-            head = tmp;
-            tail = tmp;
-        }
-        else
-        {
-            tail->next = tmp;
-            tail = tail->next;
-        }
+		if(head == NULL)
+		{
+			head = tmp;
+			tail = tmp;
+		}
+		else
+		{
+			tail->next = tmp;
+			tail = tail->next;
+		}
 		length++;
-    }
+	}
 	void print()
 	{
 		node *pointer = head;
