@@ -57,7 +57,7 @@ class DoublyLinkedList
 	string get(int x)
 	{
 		node *pointer = head;
-		for (int i=0; i!=x; i++) {
+		for (int i=0; i<=x; i++) {
 			if (i == x) {
 				return pointer->data;
 			} else {
