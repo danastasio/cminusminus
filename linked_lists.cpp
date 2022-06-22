@@ -45,12 +45,12 @@ class LinkedList
 		node *pointer = head;
 		for (int i=0; i!=x; i++) {
 			if (i == x) {
-				break;
+				return pointer->data;
 			} else {
 				pointer = pointer->next;
 			}
 		}
-		return pointer->data;
+		return "not found";
 	}
 	bool find(string fd)
 	{
@@ -66,10 +66,12 @@ class LinkedList
 	}
 	void pop()
 	{
+		// I'm like... pretty sure there isn't a memory leak here.
 		node *pointer = head;
 		for (int i=0; i<length-2; i++) {
 			pointer = pointer->next;
 		}
+		tail = NULL;
 		delete tail;
 		pointer->next = NULL;
 		tail = pointer;
